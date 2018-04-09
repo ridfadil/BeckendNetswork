@@ -51,9 +51,9 @@ exports.accCuti = async (req, res) => {
 	});
 }
 
-exports.findByID = function(req, res){
-	const id = req.params._id;
-	Cuti.findOne(id,
+exports.findByEmail = function(req, res){
+	const email = req.params.email;
+	Cuti.findOne({'email' : email},
 		function(err, cuti){
 			if(err){
 				res.send(err);
